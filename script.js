@@ -219,7 +219,7 @@ function updateWrongLetters() {
 }
 
 function updateLives() {
-    const livesLeft = gameState.maxWrong - gameState.wrongGuesses + 1;
+    const livesLeft = gameState.maxWrong - gameState.wrongGuesses; //fixed it to 6 lives at the start
     document.getElementById('livesLeft').textContent = livesLeft;
 }
 
