@@ -95,6 +95,13 @@ function addWord() {
     const input = document.getElementById('newWord');
     const word = input.value.trim().toUpperCase();
 
+    // 2. BUG FIX: Check if word already exists in wordBank
+    if (wordBank.includes(word)) {
+        alert(`"${word}" is already in your Word Bank!`);
+        input.value = '';
+        return;
+    }
+
     wordBank.push(word);
     input.value = '';
     saveWordBank();
