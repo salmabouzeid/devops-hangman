@@ -97,7 +97,7 @@ function addWord() {
 
     // 2. BUG FIX: Check if word already exists in wordBank
     if (wordBank.includes(word)) {
-        alert(`"${word}" is already in your Word Bank!`);
+        alert(`"${word}" is already in your Word Bank! Add a differnt one`);
         input.value = '';
         return;
     }
